@@ -30,7 +30,7 @@ module.exports = async(client, message, args) => {
 	if (!mynumber) {
 		return message.reply(":x: Dialing error: There's no number associated with this channel. Please dial from a channel that has DiscordTel service. Create a number in any channel by typing `>wizard`. \nIf you need assistance or have any questions, call `*611`.");
 	} else if (toDial) {
-		if (toDial && toDial.trim().toLowerCase() === "*rom") toDial = "03015050505";
+		if (toDial && toDial.trim().toLowerCase() === "*rom") toDial = "0301ROMTYPO"; // *ROM Number change
 		if (toDial === mynumber.number) return message.reply(":thinking: Why are you trying to call yourself?");
 		if (toDial === "*611") {
 			if (message.channel.type !== "dm" && message.guild.id == process.env.SUPPORTGUILD) {
